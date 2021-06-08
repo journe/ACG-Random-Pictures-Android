@@ -1,4 +1,4 @@
-package tech.jour.acg
+package tech.jour.acg.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import tech.jour.acg.R
 import tech.jour.acg.databinding.FragmentFirstBinding
 
 /**
