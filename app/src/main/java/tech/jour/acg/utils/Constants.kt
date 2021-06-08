@@ -1,4 +1,4 @@
-package tech.jour.acg
+package tech.jour.acg.utils
 
 import android.os.Build
 

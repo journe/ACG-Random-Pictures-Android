@@ -2,11 +2,12 @@ package tech.jour.acg.net
 
 import okhttp3.ResponseBody
 import retrofit2.Call
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 import retrofit2.http.Streaming
 import retrofit2.http.Url
-import tech.jour.acg.Constants
+import tech.jour.acg.utils.Constants
 
 /**
  * Created by journey on 2017/12/29.
@@ -33,7 +34,7 @@ interface RetrofitService {
     @Query("domain") domain: String = "https://i.pixiv.cat",//反向代理域名前缀，默认值是https://i.pixiv.cat
     @Query("webp") webp: Int = 1,//是否 webp 图片 url，仅在 size=large 时候有效
     @Query("detail") detail: Int = 1,//是否在重定向 url 中返回详细信息
-  ): ResponseBody
+  ): Response<ResponseBody>
 
   @GET(Constants.MOBILE)
   suspend fun getWallpaperMobileSuspend(
@@ -41,6 +42,6 @@ interface RetrofitService {
     @Query("domain") domain: String = "https://i.pixiv.cat",
     @Query("webp") webp: Int = 1,
     @Query("detail") detail: Int = 1,
-  ): ResponseBody
+  ): Response<ResponseBody>
 
 }

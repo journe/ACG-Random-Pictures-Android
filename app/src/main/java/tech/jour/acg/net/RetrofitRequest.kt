@@ -4,7 +4,7 @@ import okhttp3.Cache
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import tech.jour.acg.Constants
+import tech.jour.acg.utils.Constants
 import tech.jour.acg.MyApplication
 import java.io.File
 import java.util.concurrent.TimeUnit
@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit
  */
 object RetrofitRequest {
   val retrofit: RetrofitService
-  val client: OkHttpClient
+  private val client: OkHttpClient
 
   init {
     client = OkHttpClient.Builder()
