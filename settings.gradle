@@ -1,2 +1,3 @@
 rootProject.name = "ACG-random-pictures"
 include ':app'
+include ':cardstackview'
